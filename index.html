@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+ <meta charset="<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <title>Daynas Crystal Collector</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Daynas Crystal Collector</h1>
+    </div>
+
+    <div class ="instructions">
+        <h3>Instrustions on how to play the game</h3>
+        <br>
+        <ol>
+            <li>You will be given a random number at the start of the game.<span>"Number To Get"</span></li>
+			<li>There are four crystals below.</li>
+			<ul>
+				<li id="blue">Sapphire</li>
+				<li id="green">Emerald</li>
+				<li id="red">Ruby</li>
+				<li id="yellow">Gold</li>
+            </ul>
+            <li>By clicking on a crystal, you will add a specific amount of points to your total score.</li>
+			<li>You win the game by matching your total score to the random number.</li>
+			<li>You lose the game if your total score goes above the random number.</li>
+			<li>The value of each crystal is hidden from you until you click on it.</li>
+			<li>Each time when the game starts, the game will change the values of each crystal.</li>
+		</ol>
+    </div>
+    <div class="numberToMatch">
+        <h2>Number to Get:
+            <span id = "randomNumber"></span>
+        </h2>
+    </div>
+    <div class = "winsAndLosses">
+        <h2>Wins:
+            <span id= "numberWins"></span>
+            Losses:
+            <span id= "numberLosses"></span>
+        </h2>
+    </div>
+    <div class= "gems">
+        <img src="assets/images/sapphire.jpg" class=gemImage id="one" alt="Sapphire">
+		<img src="assets/images/green.png" class=gemImage id="two" alt="Emerald">
+		<img src="assets/images/red.png" class=gemImage id= "three" alt="Ruby">
+		<img src="assets/images/yellow.png" class=gemImage id= "four" alt="Gold">
+    </div>
+    <div class ="userTotal">
+        <h2>Your total score is:
+<span id = "finalTotal"></span>
+        </h2>
+    </div>
+    <script type = "text/javascript" src ="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script type="text/javascript" src="assets/javascript/javascript.js"></script>
+</body>
+</html>
