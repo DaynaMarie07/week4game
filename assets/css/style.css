@@ -1,0 +1,91 @@
+/* BODY BUILDING LIKE ARNOLD! */ 
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  @media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.bg {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
+body {
+    background-image: url("../images/background.jpg") ;
+   
+}
+
+
+/* STYLE THAT HEADER! */
+
+header {
+	background-color: #35D8E6;
+	margin: 0;
+	width: 100%;
+}
+
+#gameHeader {
+	text-align: center;
+	color: #6EFBFC;
+}
+
+h1 {
+	letter-spacing: 5px;
+}
+
+h2 {
+	letter-spacing: 10px;
+	text-align: center;
+}
+
+p {
+	font-size: 18px;
+}
+
+.value {
+	font-size: 75px;
+
+}
+
+#score {
+	font-size: 75px;
+	
+}
+
+
+/* POSITION THOSE DIVS! */
+
+#container {
+	width: 100%;
+	height: 300px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
+#crystal {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.crystalImage{
+    width: 215px;
+    height: 150px;
+	padding: 5px;
+    margin: 0;
+   
+    
+}

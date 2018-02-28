@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
- <meta charset="<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <title>Daynas Crystal Collector</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"><link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/js" href="./game.js">
+
+  <!-- Added a link to Bootstrap-->
+  
+    
+    <title>Crystal Collector!</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Daynas Crystal Collector</h1>
-    </div>
+    <div class= "container">
+    <h1 class="gameheader"> Daynas Crystal Collector</h1>
+    
 
-    <div class ="instructions">
-        <h3>Instrustions on how to play the game</h3>
-        <br>
-        <ol>
-            <li>You will be given a random number at the start of the game.<span>"Number To Get"</span></li>
-			<li>There are four crystals below.</li>
-			<ul>
-				<li id="blue">Sapphire</li>
-				<li id="green">Emerald</li>
-				<li id="red">Ruby</li>
-				<li id="yellow">Gold</li>
-            </ul>
-            <li>By clicking on a crystal, you will add a specific amount of points to your total score.</li>
-			<li>You win the game by matching your total score to the random number.</li>
-			<li>You lose the game if your total score goes above the random number.</li>
-			<li>The value of each crystal is hidden from you until you click on it.</li>
-			<li>Each time when the game starts, the game will change the values of each crystal.</li>
-		</ol>
-    </div>
-    <div class="numberToMatch">
-        <h2>Number to Get:
-            <span id = "randomNumber"></span>
-        </h2>
-    </div>
-    <div class = "winsAndLosses">
-        <h2>Wins:
-            <span id= "numberWins"></span>
-            Losses:
-            <span id= "numberLosses"></span>
-        </h2>
-    </div>
-    <div class= "gems">
-        <img src="assets/images/sapphire.jpg" class=gemImage id="one" alt="Sapphire">
-		<img src="assets/images/green.png" class=gemImage id="two" alt="Emerald">
-		<img src="assets/images/red.png" class=gemImage id= "three" alt="Ruby">
-		<img src="assets/images/yellow.png" class=gemImage id= "four" alt="Gold">
-    </div>
-    <div class ="userTotal">
-        <h2>Your total score is:
-<span id = "finalTotal"></span>
-        </h2>
-    </div>
-    <script type = "text/javascript" src ="https://code.jquery.com/jquery-2.2.0.js"></script>
-	<script type="text/javascript" src="assets/javascript/javascript.js"></script>
+<!--begin modal-->
+
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left: 40%; margin-bottom: 2%;">How to Play</button><br><br>
+            
+            <div class = "modal fade" id ="myModal" role ="dialog">
+                <div class ="modal-dialog">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">How the Game Works:</h4>
+                </div>
+            <div class="modal-body">
+                    <p>At the start of the game you will be given a random number!</p>
+                    <p>Each of the 6 crystals below have been assigned a mystery number. By clicking on a crystal you will add a specific amount of points to your total score or "Crystal Count".</p>
+                    <p>You can only WIN the game by matching your Crystal Count to the random number. If your Crystal Count is higher than the random number you LOSE the game.</p>
+                    <p>Keep in mind, each time the game restarts so does the value of each crystal! The crystal's value are never the same. So keep a watchful eye and perhaps a calculator handy!</p>
+                    <p>Good Luck!</p>
+            </div>  
+            <div class="modal-footer">
+                <button type="button" class="btn btn-defult" data-dismiss="modal">LET'S PLAY</button>
+            </div>  
+            </div>
+        </div>
+
+
+        <div class ="row">
+            <div class ="col-sm-3 panel text-center" style="margin-left: 100px;">
+                <p>
+                    Number of Crystals to collect:<br><span class="value"></span>
+                </p>
+            </div>
+            <div class ="col-sm-3 panel text-center" style="margin-left: 25px;">
+                    <p>
+                        Number of Crystals collected:<br><span id="score">0</span>
+                    </p>
+                </div>
+                <div class ="col-sm-3 panel text-center" style="margin-left: 25px;">
+                        <p>
+                            Number of Crystals collected:<br><span id="status">0</span>
+                        </p>
+                </div>
+        </div>
+    <!--Board-->
+    <div class= "crystalImage">
+        <div class="row">
+            <div class ="col-md-12">
+            <img src="assets/images/blue.jpg" class=crystalImage  id="one" alt="Sapphire" ></div>
+            <div class ="col">
+            <img src="assets/images/emerald.jpeg" class=crystalImage id="two" alt="Emerald"></div>
+            <div class ="col-md">
+            <img src="assets/images/ruby.jpg" class=crystalImage id= "three" alt="Ruby"  ></div>
+            <div class ="col-md">
+            <img src="assets/images/gold.jpg" class=crystalImage  id= "four" alt="Gold" ></div>
+         </div>
+        </div>
+
+
+
+   <!------begin script-----------------/
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+
 </body>
 </html>
