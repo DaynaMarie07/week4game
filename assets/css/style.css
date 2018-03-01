@@ -1,14 +1,14 @@
-/* BODY BUILDING LIKE ARNOLD! */ 
+
 img.bg {
     /* Set rules to fill background */
     min-height: 100%;
     min-width: 1024px;
       
-    /* Set up proportionate scaling */
+    /* proportion */
     width: 100%;
     height: auto;
       
-    /* Set up positioning */
+    /* positioning */
     position: fixed;
     top: 0;
     left: 0;
@@ -26,7 +26,7 @@ body {
 }
 
 
-/* STYLE THAT HEADER! */
+/* Header style */
 
 header {
 	background-color: #35D8E6;
@@ -63,7 +63,7 @@ p {
 }
 
 
-/* POSITION THOSE DIVS! */
+/* position divs */
 
 #container {
 	width: 100%;
@@ -73,7 +73,7 @@ p {
 }
 
 
-#crystal {
+#crystals {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;

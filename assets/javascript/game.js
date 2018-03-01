@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
-    var crystals: ['assets/images/blue.ts', 'assets/images/emerald.ts', 'assets/images/ruby.ts', 'assets/images/gold.ts',];
+
+    var targetNumber = Math.floor(Math.random() * 101 + 19)
+
+    var crystals= ['assets/images/blue.jpg', 'assets/images/emerald.jpg', 'assets/images/ruby.jpg', 'assets/images/gold.jpg',];
     var wins = 0;
     var loss= 0;
     var count = 0;
@@ -14,21 +17,22 @@ newCrystals();
 newGame();
 function newCrystals (){
     var number = []
-    while (numbers.length < crystals.length) {
-        var randomNumber = math.ceil(Math.random()*12)
+    while (number.length < crystals.length) {
+        var randomNumber = Math.ceil(Math.random()*12)
         var found = false;
-        for (var i= 0; i < numbers.length; i ++){
+        for (var i= 0; i < number.length; i ++){
             if (number [i] === randomNumber){
                 found = true; break;
             }
         }
-            if (!found)numbers[numbers.length]=randomNumber;
+            if (!found)number[number.length]=randomNumber;
         }
-        console.log(numbers);
-        for (i = 0; i < numbers.length; i++){
+        for (i = 0; i < number.length; i++){
             var crystalImage = $ ('.crystalImage' + i);
-            cryptalImage.attr('data-num', numbers[i]);
-            createImage.addClass('crystalImage');
+            crystalImage.attr('data-num', number[i]);
+            crystalImage.addClass('crystalImage');
+            $('.crystals').append(crystalImage);
+console.log(number);
         }
     }
 function newGame(){
@@ -43,7 +47,7 @@ function newGame(){
     $('value').text(numberGuess);
     //on click function//
     $('.crystalImage').on('click', function(){
-        count + = parseInt ($(this).data('num'));
+        count + parseInt ($(this).data('num'));
     })
     //display random number//
     $('#score').text(count);

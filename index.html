@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"><link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"><link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
     crossorigin="anonymous">
-    <link rel="stylesheet" type="text/js" href="./game.js">
 
   <!-- Added a link to Bootstrap-->
   
@@ -12,12 +11,14 @@
     <title>Crystal Collector!</title>
 </head>
 <body>
-    <div class= "container">
-    <h1 class="gameheader"> Daynas Crystal Collector</h1>
-    
+<header>
+    <h1 class id="gameheader">Crystal Game</h1>
+</header>
 
 <!--begin modal-->
 
+ <div class="container">
+     <h2>Dayna's Crystal Collector</h2>
             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left: 40%; margin-bottom: 2%;">How to Play</button><br><br>
             
             <div class = "modal fade" id ="myModal" role ="dialog">
@@ -50,14 +51,15 @@
                         Number of Crystals collected:<br><span id="score">0</span>
                     </p>
                 </div>
-                <div class ="col-sm-3 panel text-center" style="margin-left: 25px;">
-                        <p>
-                            Number of Crystals collected:<br><span id="status">0</span>
-                        </p>
-                </div>
-        </div>
-    <!--Board-->
-    <div class= "crystalImage">
+        <!--new score row-->
+            <div class ="col-sm-3 panel text-center" style="margin-left: 25px;">
+                    <span id="status"></span>
+                        <p>Wins:<br><span id="win">0</span></p>
+                        <p>Losses:<br><span id="loss">0</span></p>
+                </div>	
+            </div>
+   
+    <div id= "crystalImage">
         <div class="row">
             <div class ="col-md panel text-center">
             <img src="assets/images/blue.jpg" class=crystalImage  id="one" alt="Sapphire" ></div>
@@ -70,20 +72,9 @@
          </div>
         </div>
 
-
-
-   <!------begin script-----------------/
-
-
-
-
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="assets/javascript/game.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+   
 
 </body>
 </html>
